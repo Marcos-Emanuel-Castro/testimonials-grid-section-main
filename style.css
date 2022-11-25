@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+:root {
+    /*¨Primary*/
+
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+
+    /*Neutral*/
+
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+body {
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: var(--Light-grayish-blue);
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-size: 13px;
+}
+.container {
+    width: clamp(200px, 90%, 1300px);
+    display: grid;
+    gap: 25px;
+    margin: 30px 0;
+}
+.card-side {
+    padding: 20px 35px 20px 35px;
+    border-radius: 0.4rem;
+}
+.bg-purple {
+    background: var(--Moderate-violet) url(./images/bg-pattern-quotation.svg) no-repeat;
+    background-position-x: 92%;
+}
+.bg-dark {
+    background: var(--Very-dark-grayish-blue);
+}
+.bg-white {
+    background: var(--White);
+}
+.bg-black {
+    background: var(--Very-dark-blackish-blue);
+}
+.bg-white-two {
+    background: var(--White);
+}
+.card-side .user {
+    display: flex;
+    align-items: center;
+}
+.text-light {
+    color: var(--Light-grayish-blue);
+}
+.text-black {
+    color: var(--Very-dark-grayish-blue);
+}
+.user .user-pic {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    background: rgba(100%, 100%, 100%, 0.5);
+    margin-right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user .user-pic img{
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+}
+.user .user-info {
+    line-height: 4px;
+    font-size: 12px;
+}
+.user-info h3 {
+    font-size: 12px;
+}
+.user-info .verified{
+    color: var(--Light-grayish-blue);
+    opacity: 50%;
+}
+.user .user-info-black {
+    line-height: 4px;
+    font-size: 12px;
+}
+.user-info-black h3 {
+    font-size: 12px;
+}
+.user-info-black .verified{
+    color: var(--Very-dark-blackish-blue);
+    opacity: 50%;
+}
+.card-side .title {
+    font-size: 1.21rem;
+    font-weight: 600;
+}
+.card-side .review {
+    font-size: 0.84rem;
+    line-height: 1.15rem;
+    opacity: 70%;
+}
+@media (min-width: 1024px) {
+    .container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    }
+    .bg-purple {
+    grid-row: 1/2;
+    grid-column: 1/3;
+    }
+    .bg-dark {
+    grid-row: 1/2;
+    grid-column: 3/4;
+    }
+    .bg-white {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    }
+    .bg-black {
+    grid-row: 2/3;
+    grid-column: 2/4;
+    }
+    .bg-white-two {
+    grid-row: 1/3;
+    grid-column: 4/5;
+    }
+    .user-info h3 {
+    line-height: 5px;
+    }
+}
